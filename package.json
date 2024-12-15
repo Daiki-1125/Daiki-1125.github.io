@@ -23,6 +23,9 @@
     "@types/react-dom": "^19",
     "gh-pages": "^6.2.0",
     "sass": "^1.83.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "css-loader": "^7.1.2",
     "typescript": "^5"
   }
 }

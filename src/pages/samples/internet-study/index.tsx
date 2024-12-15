@@ -18,7 +18,8 @@ export default function Home() {
                 burger.classList.toggle(headerStyles.isActive);
                 burgerNav.classList.toggle(headerStyles.isActive);
             });
-        }})
+        }
+    }, [])
     return (
         <>
             <Head>
@@ -64,7 +65,7 @@ export default function Home() {
                         <li className={headerStyles.list}>
                             <a href="" className={headerStyles.link}>
                                 Home
-                            </a>fjfjfjfj
+                            </a>
                         </li>
                         <li className={headerStyles.list}>
                             <a href="" className={headerStyles.link}>

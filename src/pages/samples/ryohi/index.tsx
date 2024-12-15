@@ -20,7 +20,7 @@ export default function Home() {
         const burger = document.getElementById("burger");
         const burgerNav = document.getElementById("burgerNav");
         const lists = document.getElementsByClassName(explanationStyles.lists);
-        
+
         if (burger && burgerNav) {
             burger.addEventListener("click", () => {
                 burger.classList.toggle(headerStyles.isActive);
@@ -128,7 +128,7 @@ export default function Home() {
             </header>
 
             <section className={fvStyles.fv}>
-                <Image src="/ryohi/Group 37.png" alt="" className={fvStyles.bgImg} width={1300} height={800} />
+                <Image src="/ryohi/Group 37.png" alt="" width={1300} height={800} />
                 <div className={fvStyles.left}>
                     <h1 className={fvStyles.catchcopy}>
                         キャッチコピー
