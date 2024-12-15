@@ -1,0 +1,95 @@
+// コーヒー
+:root {
+    --coffeewhite: #FFF4E5;
+    --coffeeyellow: #BCAF37;
+    --coffeebrown: #804B12;
+    --coffeeblue: linear-gradient( 90deg , #020638, #111B82, #020638);
+
+    --coffeeh1font: 80px;
+    --coffeeh2font: 60px;
+    --coffeeh3font: 45px;
+    --coffeelarge: 32px;
+    --coffeenormal: 24px;
+    --coffeesmall: 20px;
+    --coffeevarySmall: 18px;
+    
+    @media screen and (max-width:767px) {
+        --coffeeh1font: 50px;
+        --coffeeh2font: 40px;
+        --coffeeh3font: 32px;
+        --coffeelarge: 24px;
+        --coffeenormal: 20px;
+        --coffeesmall: 17px;
+        --coffeevarySmall: 12px;
+    }
+}
+
+//インターネット
+:root{
+    --internetgGradationOrange: linear-gradient(#ffd180 , #ffe6bb);
+    --internetOrange: #FFD180;
+    --internetOrange20: #FFF6E6;
+    --internetOrange30: #FFEBC7;
+    --internetOrange50: #ffe8bf;
+    --internetWhite: #fff;
+    --internetBlack: #444;
+    --internetBlue: #808BFF;
+    --internetGradationBlue: linear-gradient(#808bff , #4d5399);
+    --internetRed: #FF8080;
+    --internetGray: #F5F5F5;
+
+
+    --internetFonth1: 40px;
+    --internetFonth2: 32px;
+    --internetFonth3: 28px;
+    --internetLarge: 24px;
+    --internetNormal: 20px;
+    --internetSmall: 16px;
+
+    @media screen and (max-width:767px) {
+        --internetFonth1: 32px;
+        --internetFonth2: 24px;
+        --internetFonth3: 20px;
+        --internetLarge: 18px;
+        --internetNormal: 14px;
+        --internetSmall: 12px;
+    }
+}
+
+//旅費規定
+:root{    
+    --ryohiBlack: #000;
+    --ryohiWhite: #fff;
+    --ryohiGreen: #A9B527;
+    --ryohiLightGreen: #DFE2B8;
+    --ryohiVaryLightGreen: #F7F8EA;
+    --ryohiDarkGray: #7C7C75;
+    --ryohiGray: #f5f5f5;
+
+
+    --ryohiSectionBefore: 150px;
+    --ryohiFonth1: 60px;
+    --ryohiFonth2: 40px;
+    --ryohiFonth3: 28px;
+    --ryohiLarge: 24px;
+    --ryohiNormal: 20px;
+    --ryohiSmall: 16px;
+    @media screen and (max-width:767px) {
+        --ryohiSectionBefore: 60px;
+        --ryohiFonth1: 32px;
+        --ryohiFonth2: 24px;
+        --ryohiFonth3: 20px;
+        --ryohiLarge: 18px;
+        --ryohiNormal: 16px;
+        --ryohiSmall: 12px;
+    }
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+*{
+    box-sizing: border-box;
+    font-family: "Noto Serif JP" , "Noto Sans JP" , "Zen Maru Gothic";
+}

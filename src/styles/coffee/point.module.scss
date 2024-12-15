@@ -1,0 +1,164 @@
+.point{
+    margin-top: 100px;
+    padding: 0 64px;
+    position: relative;
+    .leaf{
+        position: absolute;
+        z-index: -1;
+        &:nth-child(1){
+            top: -200px;
+            left: 0;
+        }
+        &:nth-child(2){
+            top: 500px;
+            right: 0;
+        }
+        &:nth-child(3){
+            top: 2050px;
+            left: 0;
+        }
+    }
+    .titleBox{
+        text-align: center;
+        .title{
+            margin: 0;
+            font-size: var(--coffeeh2font);
+            color: var(--coffeewhite);
+        }
+        .yellowLine{
+            width: 70vw;
+        }
+    }
+    .listBox{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .list{
+            margin-top: 50px;
+            position: relative;
+            width: 100%;
+            height: 650px;
+            .bgImg{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .listTitle{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                color: var(--coffeewhite);
+                font-size: var(--coffeeh3font);
+                margin: 0;
+            }
+            .under{
+                position: absolute;
+                top: 180px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 100px;
+                .beanImage{
+                    width: 50%;
+                }
+                .text{
+                    margin: 0;
+                    width: 45%;
+                    color: var(--coffeewhite);
+                    font-size: var(--coffeesmall);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .point{
+        margin-top: 100px;
+        padding: 0 20px;
+        position: relative;
+        .leaf{
+            position: absolute;
+            z-index: -1;
+            width: 250px;
+            height: 300px;
+            &:nth-child(1){
+                top: -140px;
+                left: 0;
+            }
+            &:nth-child(2){
+                top: 750px;
+                right: 0;
+            }
+            &:nth-child(3){
+                top: 2250px;
+                left: 0;
+            }
+        }
+        .titleBox{
+            width: 100%;
+            text-align: center;
+            .title{
+                width: 100%;
+                margin: 0;
+                font-size: var(--coffeeh3font);
+                color: var(--coffeewhite);
+            }
+            .yellowLine{
+                width: 90vw;
+                height: 13px;
+            }
+        }
+        .listBox{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            .list{
+                margin-top: 50px;
+                position: relative;
+                width: 100%;
+                height: 700px;
+                .bgImg{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+                .listTitle{
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    top: 80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    color: var(--coffeewhite);
+                    font-size: var(--coffeeh3font);
+                    margin: 0;
+                }
+                .under{
+                    position: absolute;
+                    top: 150px;
+                    display: block;
+                    width: 100%;
+                    padding: 0 30px;
+                    .beanImage{
+                        width: 100%;
+                        height: 200px;
+                    }
+                    .text{
+                        margin: 16px 0 0 0;
+                        width: 100%;
+                        color: var(--coffeewhite);
+                        font-size: var(--coffeesmall);
+                    }
+                }
+            }
+        }
+    }
+}

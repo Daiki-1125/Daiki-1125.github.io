@@ -1,0 +1,204 @@
+.flow {
+    background-color: var(--internetOrange20);
+    padding: 50px 0 0;
+    color: var(--internetBlack);
+
+    .title {
+        font-size: var(--internetFonth2);
+        margin: 0;
+        text-align: center;
+    }
+
+    .step {
+        margin-top: 50px;
+        padding: 40px 32px;
+        background-color: var(--internetWhite);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 800px;
+        border-radius: 16px;
+        margin: 50px auto 0;
+
+        .stepBox {
+            width: 200px;
+
+            .boxStep {
+                color: var(--internetRed);
+                text-align: center;
+            }
+
+            .boxTitle {
+                margin: 10px 0 0;
+                text-align: center;
+            }
+
+            .text {
+                margin: 10px 0 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .buy {
+        margin-top: 50px;
+        padding: 50px 64px 0;
+        background-color: var(--internetOrange30);
+
+        .title {
+            font-size: var(--internetFonth2);
+        }
+
+        .main {
+            display: flex;
+            margin-top: 50px;
+            .left {
+                margin-top: -50px;
+                img {}
+            }
+
+            .right {
+                .text {
+                    margin: 0;
+
+                }
+
+                .under {
+                    display: flex;
+                    align-items: flex-end;
+                    .buyBox {
+                        margin-top: 80px;
+                        .sale{
+                            margin-bottom: -60px;
+                        }
+                        .buyBtn {
+                            width: 500px;
+                            height: 60px;
+                            padding: 5px 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            color: var(--internetWhite);
+                            background: var(--internetGradationBlue);
+                            font-size: var(--internetNormal);
+                            border: none;
+                            border-radius: 30px;
+                            .arrow {
+                                
+                            }
+                        }
+                    }
+                    .ilast{
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .flow {
+        background-color: var(--internetOrange20);
+        padding: 50px 0 0;
+        color: var(--internetBlack);
+    
+        .title {
+            font-size: var(--internetFonth2);
+            margin: 0;
+            text-align: center;
+        }
+    
+        .step {
+            margin-top: 50px;
+            padding: 40px 32px;
+            background-color: var(--internetWhite);
+            display: block;
+            width: 350px;
+            border-radius: 16px;
+            margin: 50px auto 0;
+            text-align: center;
+            .stepBox {
+                width: 200px;
+                margin: 0 auto;
+                .boxStep {
+                    color: var(--internetRed);
+                    text-align: center;
+                }
+    
+                .boxTitle {
+                    margin: 10px 0 0;
+                    text-align: center;
+                }
+    
+                .text {
+                    margin: 10px 0 0;
+                    text-align: left;
+                }
+            }
+            .arrow{
+                rotate: 90deg;
+            }
+        }
+    
+        .buy {
+            margin-top: 50px;
+            padding: 50px 20px 0;
+            background-color: var(--internetOrange30);
+    
+            .title {
+                font-size: var(--internetFonth2);
+            }
+    
+            .main {
+                display: block;
+                margin-top: 50px;
+                .left {
+                    margin-top: -50px;
+                    display: none;
+                    img {}
+                }
+    
+                .right {
+                    .text {
+                        margin: 0;
+    
+                    }
+    
+                    .under {
+                        display: block;
+                        .buyBox {
+                            margin-top: 30px;
+                            .sale{
+                                margin-bottom: -60px;
+                                width: 100px;
+                                height: 100px;
+                            }
+                            .buyBtn {
+                                width: 100%;
+                                height: 60px;
+                                padding: 5px 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                color: var(--internetWhite);
+                                background: var(--internetGradationBlue);
+                                font-size: var(--internetNormal);
+                                border: none;
+                                border-radius: 30px;
+                                .arrow {
+                                    
+                                }
+                            }
+                        }
+                        .ilast{
+                            margin-top: 20px;
+                            width: 90vw;
+                            height: 50vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

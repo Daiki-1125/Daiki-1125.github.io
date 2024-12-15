@@ -1,0 +1,123 @@
+.about {
+    background-color: var(--internetGray);
+    padding: 50px 64px;
+    color: var(--internetBlack);
+    .title {
+        margin: 0;
+        text-align: center;
+        font-size: var(--internetFonth1);
+    }
+
+    .main {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        .left {
+            width: 45%;
+            img {
+
+            }
+        }
+
+        .right {
+            width: 45%;
+            margin-top: 32px;
+            .text {
+                margin: 0;
+                font-size: var(--internetNormal);
+                span {
+                    font-size: var(--internetLarge);
+                    font-weight: medium;
+                }
+                &:nth-child(2){
+                    margin-top: 8px;
+                }
+            }
+
+            .under {
+                margin-top: 50px;
+                img {
+                    margin-left: -80px;
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    
+                }
+
+                .textBox {
+                    width: 400px;
+                    margin-left: 80px;
+                    .text {
+                        display: inline-block;
+                        background-color: var(--internetWhite);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .about {
+        background-color: var(--internetGray);
+        padding: 50px 20px;
+        color: var(--internetBlack);
+        .title {
+            margin: 0;
+            text-align: center;
+            font-size: var(--internetFonth1);
+        }
+    
+        .main {
+            margin-top: 50px;
+            display: block;
+            justify-content: space-between;
+            .left {
+                text-align: center;
+                img {
+                    width: 350px;
+                    height: 300px;
+                }
+            }
+    
+            .right {
+                width: 100%;
+                margin-top: 32px;
+                .text {
+                    margin: 0;
+                    font-size: var(--internetNormal);
+                    span {
+                        font-size: var(--internetLarge);
+                        font-weight: bold;
+                    }
+                    &:nth-child(2){
+                        margin-top: 8px;
+                    }
+                }
+    
+                .under {
+                    margin-top: 50px;
+                    text-align: center;
+                    img {
+                        margin: 0 auto;
+                        &:nth-child(1){
+                            display: none;
+                        }
+                        &:nth-child(2){
+                            display: block;
+                        }
+
+                    }
+    
+                    .textBox {
+                        margin: 15px 0 0;
+                        .text {
+                            display: inline-block;
+                            background-color: var(--internetWhite);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

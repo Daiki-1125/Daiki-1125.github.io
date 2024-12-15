@@ -1,0 +1,39 @@
+.footer {
+    margin-top: 100px;
+    text-align: center;
+    color: var(--coffeewhite);
+    background: var(--coffeeblue);
+    font-size: var(--coffeevarySmall);
+
+    .text {
+        margin: 0;
+    }
+
+    .account {
+        margin: 8px 0 0;
+        .url {
+            color: var(--coffeewhite);
+            padding: 0 10px 0 0;
+            margin: 0 10px 0 0;
+            &:visited{
+                color: var(--coffeewhite);
+            }
+            &:nth-child(1){
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .official {
+        color: var(--coffeeyellow);
+        font-size: var(--coffeesmall);
+        &:visited{
+            color: var(--coffeeyellow);
+        }
+    }
+
+    .qcafe {
+        margin: 8px 0 0;
+        opacity: .5;
+    }
+}

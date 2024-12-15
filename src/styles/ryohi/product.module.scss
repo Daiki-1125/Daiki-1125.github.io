@@ -1,0 +1,309 @@
+.product {
+    margin-top: 170px;
+    padding: 0;
+
+    .titleBox {
+        .title {
+            font-size: var(--ryohiFonth2);
+            text-align: center;
+            margin: 0;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: -150px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                text-align: center;
+                display: block;
+                content: "EXPLANATION";
+                font-size: var(--ryohiSectionBefore);
+                color: var(--ryohiGreen);
+                opacity: 0.15;
+            }
+        }
+    }
+
+    .main {
+        margin-top: 50px;
+        padding: 50px 128px;
+        height: 800px;
+        background-color: var(--ryohiVaryLightGreen);
+
+        .mainTitleBox {
+
+            .title {
+                font-size: var(--ryohiFonth3);
+                text-align: center;
+                margin: 0;
+
+                &::after {
+                    width: 300px;
+                    height: 15px;
+                    background-color: var(--ryohiGreen);
+                    display: block;
+                    content: "";
+                    opacity: .2;
+                    border-radius: 100px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .bottom {
+            margin-top: 50px;
+            position: relative;
+
+            .book {
+                position: absolute;
+            }
+            
+            .point {
+                position: absolute;
+                left: 43vw;
+                top: 40px;
+                rotate: -5deg;
+            }
+            
+            .textBox {
+                position: absolute;
+                width: 500px;
+                left: 50vw;
+                top: 150px;
+                .title {
+                    font-size: var(--ryohiFonth3);
+                    margin: 0;
+                    
+                }
+                
+                .text {
+                    margin: 8px 0 0;
+                }
+            }
+            
+            .buycard {
+                position: absolute;
+                top: 320px;
+                right: 0;
+                background-color: var(--ryohiWhite);
+                width: 700px;
+                padding: 15px 30px;
+                border-radius: 24px;
+                
+                .title {
+                    text-align: center;
+                    margin: 0;
+                    font-size: var(--ryohiFonth3);
+                }
+                
+                .text {
+                    font-size: var(--ryohiNormal);
+                    margin: 16px 0 0 0;
+                }
+                
+                .moneyBox {
+                    display: flex;
+                    margin-top: 16px;
+                    font-size: var(--ryohiNormal);
+                    
+                    .cheap {
+                        margin: 0 32px 0 0;
+                        
+                    }
+                    
+                    .expensive {
+                        margin: 0;
+                        color: var(--ryohiDarkGray);
+                        position: relative;
+                        opacity: .5;
+                        
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            -webkit-transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            width: 100%;
+                            height: 2px;
+                            background-color: var(--ryohiDarkGray);
+                        }
+                    }
+                }
+                
+                
+                .buyBtn {
+                    display: inline-block;
+                    margin-top: 32px;
+                    text-decoration: none;
+                    font-size: var(--ryohiNormal);
+                    color: var(--ryohiWhite);
+                    background-color: var(--ryohiGreen);
+                    padding: 5px 40px;
+                    border-radius: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .product {
+        margin-top: 70px;
+        padding: 0;
+    
+        .titleBox {
+            .title {
+                font-size: var(--ryohiFonth2);
+                text-align: center;
+                margin: 0;
+                position: relative;
+    
+                &::before {
+                    position: absolute;
+                    top: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    text-align: center;
+                    display: block;
+                    content: "EXPLANATION";
+                    font-size: var(--ryohiSectionBefore);
+                    color: var(--ryohiGreen);
+                    opacity: 0.15;
+                }
+            }
+        }
+    
+        .main {
+            margin-top: 50px;
+            padding: 50px 20px;
+            height: auto;
+            background-color: var(--ryohiVaryLightGreen);
+    
+            .mainTitleBox {
+    
+                .title {
+                    font-size: var(--ryohiFonth3);
+                    text-align: center;
+                    margin: 0;
+                    position: relative;
+                    &::after {
+                        width: 60vw;
+                        height: 15px;
+                        background-color: var(--ryohiGreen);
+                        display: block;
+                        content: "";
+                        opacity: .2;
+                        border-radius: 100px;
+                        position: absolute;
+                        left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    }
+                }
+            }
+    
+            .bottom {
+                margin-top: 50px;
+                position: relative;
+    
+                .book {
+                    position: static;
+                    width: 90vw;
+                    height: 75vw;
+                }
+                
+                .point {
+                    position: absolute;
+                    left: -30px;
+                    top: 310px;
+                    rotate: -5deg;
+                    width: 150px;
+                    height: 100px;
+                }
+                
+                .textBox {
+                    position: static;
+                    width: 100%;
+                    margin-top: 64px;
+                    .title {
+                        font-size: var(--ryohiFonth3);
+                        margin: 0;
+                    }
+                    
+                    .text {
+                        margin: 8px 0 0;
+                    }
+                }
+                
+                .buycard {
+                    position: static;
+                    background-color: var(--ryohiWhite);
+                    width: 100%;
+                    padding: 10px 15px;
+                    border-radius: 24px;
+                    margin-top: 16px;
+                    .title {
+                        text-align: center;
+                        margin: 0;
+                        font-size: var(--ryohiFonth3);
+                    }
+                    
+                    .text {
+                        font-size: var(--ryohiNormal);
+                        margin: 16px 0 0 0;
+                    }
+                    
+                    .moneyBox {
+                        display: flex;
+                        margin-top: 16px;
+                        font-size: var(--ryohiNormal);
+                        
+                        .cheap {
+                            margin: 0 32px 0 0;
+                            
+                        }
+                        
+                        .expensive {
+                            margin: 0;
+                            color: var(--ryohiDarkGray);
+                            position: relative;
+                            opacity: .5;
+                            
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                -webkit-transform: translate(-50%, -50%);
+                                -ms-transform: translate(-50%, -50%);
+                                width: 100%;
+                                height: 2px;
+                                background-color: var(--ryohiDarkGray);
+                            }
+                        }
+                    }
+                    
+                    
+                    .buyBtn {
+                        display: inline-block;
+                        margin-top: 32px;
+                        text-decoration: none;
+                        font-size: var(--ryohiNormal);
+                        color: var(--ryohiWhite);
+                        background-color: var(--ryohiGreen);
+                        padding: 5px 40px;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

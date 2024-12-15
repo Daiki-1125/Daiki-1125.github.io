@@ -1,0 +1,227 @@
+.explanation {
+    margin-top: 170px;
+
+    .titleBox {
+        .title {
+            font-size: var(--ryohiFonth2);
+            text-align: center;
+            margin: 0;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: -150px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                text-align: center;
+                display: block;
+                content: "EXPLANATION";
+                font-size: var(--ryohiSectionBefore);
+                color: var(--ryohiGreen);
+                opacity: 0.15;
+            }
+        }
+    }
+
+    .main {
+        margin-top: 50px;
+        padding: 50px 0;
+        background-color: var(--ryohiGray);
+
+        .listBox {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 1000px;
+            margin: 0 auto;
+
+            .lists {
+                margin-top: 16px;
+                transition: max-height 0.8s ease, opacity 0.8s ease;
+
+                .top {
+                    background-color: var(--ryohiLightGreen);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px 20px;
+                    border-radius: 8px;
+
+                    .left {
+                        font-size: var(--ryohiLarge);
+                    }
+
+                    .right {
+                        transform: rotate(180deg);
+
+                        .img {}
+                    }
+                }
+
+                .bottom {
+                    max-height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: max-height 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+                    border-radius: 0 0 8px 8px;
+                    padding: 0;
+                    background-color: var(--ryohiWhite);
+                    height: 0;
+                    justify-content: space-between;
+
+                    .text {
+                        display: none;
+                        width: 50%;
+                    }
+
+                    .img {
+                        display: none;
+                    }
+                }
+
+                &.isActive {
+                    margin-top: 16px;
+
+                    .top {
+                        background-color: var(--ryohiLightGreen);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 20px;
+                        border-radius: 8px 8px 0 0;
+
+                        .left {
+                            font-size: var(--ryohiLarge);
+                        }
+
+                        .right {
+                            transform: rotate(0deg);
+
+                            .img {}
+                        }
+                    }
+
+                    .bottom {
+                        max-height: 500px;
+                        /* 適切な値に設定 */
+                        opacity: 1;
+                        visibility: visible;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 30px 40px;
+                        background-color: var(--ryohiWhite);
+                        height: auto;
+
+                        .text {
+                            width: 50%;
+                            display: block;
+                        }
+
+                        .img {
+                            display: block;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .explanation {
+        margin-top: 70px;
+
+        .titleBox {
+            .title {
+                font-size: var(--ryohiFonth2);
+                text-align: center;
+                margin: 0;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: -50px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    text-align: center;
+                    display: block;
+                    content: "EXPLANATION";
+                    font-size: var(--ryohiSectionBefore);
+                    color: var(--ryohiGreen);
+                    opacity: 0.15;
+                }
+            }
+        }
+
+        .main {
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: var(--ryohiGray);
+
+            .listBox {
+                margin: 0;
+                padding: 0 20px;
+                list-style: none;
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+
+                .displayNone {
+                    display: none;
+                }
+
+                .lists {
+                    margin-top: 16px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    .top {
+                        background-color: var(--ryohiLightGreen);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 20px;
+                        border-radius: 8px 8px 0 0;
+
+                        .left {
+                            font-size: var(--ryohiLarge);
+                        }
+
+                        .right {
+                            .img {}
+                        }
+                    }
+
+                    .bottom {
+                        border-radius: 0 0 8px 8px;
+                        padding: 15px 20px;
+                        background-color: var(--ryohiWhite);
+                        display: block;
+                        justify-content: space-between;
+
+                        .text {
+                            width: 100%;
+                            font-size: var(--ryohiSmall);
+                        }
+
+                        .img {
+                            width: 50%;
+                            height: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

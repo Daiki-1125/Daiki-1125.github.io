@@ -1,0 +1,106 @@
+.point {
+    width: 100vw;
+    padding: 50px 0;
+
+    .title {
+        margin: 0;
+        font-size: var(--internetFonth1);
+        text-align: center;
+    }
+
+    .cardList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .list {
+            box-sizing: content-box;
+            width: 850px;
+            height: 360px;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--internetOrange50);
+            padding: 20px 25px;
+            padding-left: calc((100vw - 900px) / 2 + 25px);
+            margin-top: 32px;
+            
+            &:nth-child(2){
+                padding: 20px 25px;
+                padding-right: calc((100vw - 900px) / 2 + 25px);
+                margin-left: calc((100vw - 900px) / 2 + 25px);
+            }
+
+            .left {
+                width: 50%;
+                .listPoint {
+                    background-color: var(--internetWhite);
+                    border-radius: 100px;
+                    font-size: var(--internetFonth2);
+                    padding: 10px 20px;
+                    margin: 0;
+                    display: inline-block;
+                }
+
+                .text {
+                    margin: 32px 0 0;
+                }
+
+                .right {
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .point {
+        width: 100vw;
+        padding: 50px 0;
+    
+        .title {
+            margin: 0;
+            text-align: center;
+        }
+    
+        .cardList {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+    
+            .list {
+                box-sizing: border-box;
+                width: 100vw;
+                height: auto;
+                display: block;
+                justify-content: space-between;
+                background-color: var(--internetOrange50);
+                padding: 20px 20px;
+                margin-top: 16px;
+                &:nth-child(2){
+                    padding: 20px;
+                    margin: 16px 0 0;
+                }
+                .left {
+                    width: 100%;
+                    .listPoint {
+                        background-color: var(--internetWhite);
+                        border-radius: 100px;
+                        font-size: var(--internetFonth2);
+                        padding: 10px 20px;
+                        margin: 0;
+                        display: inline-block;
+                    }
+    
+                    .text {
+                        margin: 32px 0 0;
+                    }
+                }
+
+                .right {
+                    margin: 16px 0 0;
+                }
+            }
+        }
+    }
+}

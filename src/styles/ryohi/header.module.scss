@@ -1,0 +1,172 @@
+.header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    position: fixed;
+    background-color: var(--ryohiWhite);
+    z-index: 10;
+
+    .right {
+        font-size: var(--ryohiNormal);
+        font-weight: bold;
+    }
+
+    .left {
+
+        .link {
+            text-decoration: none;
+            color: var(--ryohiBlack);
+            margin: 0 10px;
+
+            &:hover {
+                opacity: .5;
+                cursor: pointer;
+            }
+        }
+
+        .burgerBox {
+            display: none;
+        }
+    }
+
+    .burgerNav {
+        display: none;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .header {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 20px;
+
+        .right {
+            font-size: var(--ryohiNormal);
+            font-weight: bold;
+        }
+
+        .left {
+
+            .link {
+                display: none;
+                text-decoration: none;
+                color: var(--ryohiBlack);
+                margin: 0 10px;
+
+                &:hover {
+                    opacity: .5;
+                    cursor: pointer;
+                }
+            }
+
+            .burgerBox {
+                --opacity: 1;
+                --rotate: 0;
+                --translate: 0.5rem;
+                --burger-color: #000;
+                --background-color: #fff;
+                display: grid;
+                width: 60px;
+                height: 60px;
+                place-items: center;
+                border: none;
+                background-color: var(--background-color);
+                cursor: pointer;
+                position: fixed;
+                z-index: 10;
+                right: 0;
+                top: 0;
+
+                &.isActive {
+                    --opacity: 0;
+                    --rotate: 135deg;
+                    --translate: 0;
+                    --background-color: #fff opacity:0.7;
+                }
+
+                span {
+                    display: block;
+                    width: 70%;
+                    height: 2px;
+                    background-color: var(--burger-color);
+                    grid-area: 1 / 1 / -1 / -1;
+                    transition: opacity 0.4s, rotate 0.4s, translate 0.4s;
+                    border-radius: 8px;
+
+                    &:nth-child(1) {
+                        opacity: var(--opacity);
+                    }
+
+                    &:nth-child(2) {
+                        translate: 0 calc(var(--translate) * -1);
+                        rotate: var(--rotate);
+                    }
+
+                    &:nth-child(3) {
+                        translate: 0 var(--translate);
+                        rotate: calc(var(--rotate) * -1);
+                    }
+                }
+            }
+        }
+
+        .burgerNav {
+            display: block;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            z-index: 100;
+            width: 100vw;
+            height: calc((100vh - 60px));
+            opacity: 0;
+            position: fixed;
+            pointer-events: none;
+            transition: opacity .5s ease;
+            &.isActive {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .navList {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                background-color: var(--ryohiLightGreen);
+                padding: 130px 30px 0;
+
+                .list {
+                    width: 100%;
+                    height: 50px;
+                    background-color: rgba(255, 255, 255, .5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 4px;
+                    margin-top: 8px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    .link {
+                        color: var(--ryohiBlack);
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .tree {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+            }
+        }
+    }
+}

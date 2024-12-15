@@ -1,0 +1,161 @@
+.contact {
+    margin-top: 100px;
+    padding: 0 15vw;
+    
+
+    .title {
+        color: var(--coffeewhite);
+        font-size: var(--coffeeh2font);
+        text-align: center;
+        margin: 0;
+    }
+
+    .main {
+        width: 100%;
+        text-align: center;
+        .inputBox {
+            margin-top: 16px;
+            width: 100%;
+            background-color: var(--coffeewhite);
+            color: var(--coffeebrown);
+            padding: 5px 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+
+            .text {
+                text-align: left;
+                margin: 0;
+                width: 300px;
+                font-size: var(--coffeesmall);
+                padding-right: 20px;
+                border-right: 1px solid #444;
+                margin-right: 20px;
+            }
+
+            .input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                background-color: var(--coffeewhite);
+            }
+        }
+        .textareaBox {
+            margin-top: 16px;
+            text-align: center;
+            background-color: var(--coffeewhite);
+            border-radius: 4px;
+            padding: 10px 40px;
+            width: 100%;
+            height: 300px;
+            .text {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #444;
+                margin-top: 0;
+            }
+            
+            .input {
+                width: 100%;
+                height: 80%;
+                background-color: var(--coffeewhite);
+                border: none;
+                resize: none;
+            }
+        }
+
+        .btn {
+            margin-top: 24px;
+            border: none;
+            background-color: var(--coffeewhite);
+            font-size: var(--coffeesmall);
+            border-radius: 4px;
+            padding: 5px 20px;
+            
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .contact {
+        margin-top: 100px;
+        padding: 0 5vw;
+        
+    
+        .title {
+            color: var(--coffeewhite);
+            font-size: var(--coffeeh2font);
+            text-align: center;
+            margin: 0;
+        }
+    
+        .main {
+            width: 100%;
+            text-align: center;
+            .inputBox {
+                margin-top: 16px;
+                width: 100%;
+                background-color: var(--coffeewhite);
+                color: var(--coffeebrown);
+                padding: 5px 40px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+    
+                .text {
+                    text-align: left;
+                    margin: 0;
+                    width: 300px;
+                    font-size: var(--coffeesmall);
+                    padding-right: 20px;
+                    border-right: 1px solid #444;
+                    margin-right: 20px;
+                }
+    
+                .input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: var(--coffeewhite);
+                }
+            }
+            .textareaBox {
+                margin-top: 16px;
+                text-align: center;
+                background-color: var(--coffeewhite);
+                border-radius: 4px;
+                padding: 10px 40px;
+                width: 100%;
+                height: 300px;
+                .text {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #444;
+                    margin-top: 0;
+                }
+                
+                .input {
+                    width: 100%;
+                    height: 80%;
+                    background-color: var(--coffeewhite);
+                    border: none;
+                    resize: none;
+                }
+            }
+    
+            .btn {
+                margin-top: 24px;
+                border: none;
+                background-color: var(--coffeewhite);
+                font-size: var(--coffeesmall);
+                border-radius: 4px;
+                padding: 5px 20px;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

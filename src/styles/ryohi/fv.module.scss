@@ -1,0 +1,165 @@
+.fv {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    .bgImg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .left {
+        position: absolute;
+        top: 250px;
+        left: 64px;
+        color: var(--ryohiWhite);
+        font-family: "Zen Old Mincho";
+
+        .catchcopy {
+            font-size: var(--ryohiFonth1);
+            margin: 0;
+
+        }
+
+        .text {
+            font-size: var(--ryohiNormal);
+            width: 700px;
+            margin: 0;
+        }
+    }
+
+    .right {
+        width: 500px;
+        position: relative;
+        top: 600px;
+        left: 800px;
+
+        .mark {
+            background-color: var(--ryohiWhite);
+            border-radius: 20px;
+            padding: 2px 15px;
+            display: inline-block;
+            position: absolute;
+            margin: 0;
+            z-index: 2;
+            left: 40px;
+        }
+
+        .triangle {
+            width: 15px;
+            height: 15px;
+            background: var(--ryohiWhite);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            rotate: 30deg;
+            position: absolute;
+            top: 20px;
+            left: 200px;
+            z-index: 1;
+        }
+
+        .link {
+            padding: 10px 100px;
+            background-color: var(--ryohiGreen);
+            color: var(--ryohiWhite);
+            font-size: var(--ryohiNormal);
+            text-decoration: none;
+            border-radius: 50px;
+            position: absolute;
+            left: 0;
+            top: 20px;
+
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .fv {
+        width: 100%;
+        height: 600px;
+        position: relative;
+
+        .bgImg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .left {
+            position: absolute;
+            top: 220px;
+            left: 20px;
+            color: var(--ryohiWhite);
+            font-family: "Zen Old Mincho";
+
+            .catchcopy {
+                font-size: var(--ryohiFonth1);
+                margin: 0;
+
+            }
+
+            .text {
+                font-size: var(--ryohiNormal);
+                width: 90%;
+                margin: 0;
+            }
+        }
+
+        .right {
+            width: auto;
+            top: 0;
+            left: 0;
+            position: relative;
+
+            .mark {
+                background-color: var(--ryohiWhite);
+                border-radius: 20px;
+                padding: 2px 15px;
+                display: inline-block;
+                position: absolute;
+                margin: 0;
+                z-index: 2;
+                top: 400px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                width: 250px;
+                text-align: center;
+            }
+
+            .triangle {
+                width: 15px;
+                height: 15px;
+                background: var(--ryohiWhite);
+                clip-path: polygon(0 0, 100% 0, 50% 100%);
+                rotate: 30deg;
+                position: absolute;
+                top: 420px;
+                left: 65%;
+                z-index: 1;
+            }
+
+            .link {
+                width: 300px;
+                text-align: center;
+                padding: 10px 80px;
+                background-color: var(--ryohiGreen);
+                color: var(--ryohiWhite);
+                font-size: var(--ryohiNormal);
+                text-decoration: none;
+                border-radius: 50px;
+                position: absolute;
+                top: 420px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+            }
+        }
+    }
+}

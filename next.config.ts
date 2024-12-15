@@ -1,8 +1,13 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactStrictMode: true,
+  swcMinify: true,       // SWC を使用した高速な minify を有効化
+  images: {
+    domains: ['example.com'],
+  },
+  webpack: (config) => {
+    return config;
+  },
 };
 
 export default nextConfig;
