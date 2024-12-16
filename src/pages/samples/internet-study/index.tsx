@@ -56,7 +56,7 @@ export default function Home() {
                     </div>
 
                 </nav>
-                <nav className={headerStyles.burgerNav} id="burgerNav">
+                <div className={headerStyles.burgerNav} id="burgerNav">
                     <ul className={headerStyles.navList}>
                     <div className={headerStyles.maru}>
                         <div></div>
@@ -83,7 +83,7 @@ export default function Home() {
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </div>
             </header>
 
 
