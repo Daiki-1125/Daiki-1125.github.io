@@ -22,7 +22,7 @@ export default function Home() {
 
 
             <section className={fvStyles.fv}>
-                <Image src="/coffee/コーヒー豆 1.png" alt="" className={fvStyles.bgImg} width={1500} height={800} />
+                <Image src="/coffee/coffeeBean1.png" alt="" className={fvStyles.bgImg} width={1500} height={800} />
 
                 <h1 className={fvStyles.title}>
                     original cafe
@@ -57,15 +57,15 @@ export default function Home() {
 
 
             <section className={pointStyles.point}>
-                <Image src="/coffee/葉っぱ-removebg-preview (1) 1.png" alt="" width={400} height={500} className={pointStyles.leaf} />
-                <Image src="/coffee/葉っぱ-removebg-preview (1) 2.png" alt="" width={400} height={500} className={pointStyles.leaf} />
-                <Image src="/coffee/葉っぱ-removebg-preview (1) 3.png" alt="" width={400} height={500} className={pointStyles.leaf} />
+                <Image src="/coffee/leaf1.png" alt="" width={400} height={500} className={pointStyles.leaf} />
+                <Image src="/coffee/leaf2.png" alt="" width={400} height={500} className={pointStyles.leaf} />
+                <Image src="/coffee/leaf3.png" alt="" width={400} height={500} className={pointStyles.leaf} />
                 <div className={pointStyles.titleBox}>
                     <h2 className={pointStyles.title}>
                         Q'cafeの3つのこだわり
                     </h2>
                     <Image
-                        src="/coffee/Rectangle 1.png"
+                        src="/coffee/Rectangle1.png"
                         alt=""
                         width={1000}
                         height={20}
@@ -76,7 +76,7 @@ export default function Home() {
                 <ul className={pointStyles.listBox}>
                     <li className={pointStyles.list}>
                         <Image
-                            src="/coffee/レトロな背景 1.png"
+                            src="/coffee/background.png"
                             alt=""
                             width={1300}
                             height={600}
@@ -87,7 +87,7 @@ export default function Home() {
                         </h3>
                         <div className={pointStyles.under}>
                             <Image
-                                src="/coffee/コーヒー豆こだわり 1.png"
+                                src="/coffee/Commitment1.png"
                                 alt=""
                                 className={pointStyles.beanImage}
                                 width={400}
@@ -104,7 +104,7 @@ export default function Home() {
 
                     <li className={pointStyles.list}>
                         <Image
-                            src="/coffee/レトロな背景 1.png"
+                            src="/coffee/background.png"
                             alt=""
                             width={1300}
                             height={600}
@@ -115,7 +115,7 @@ export default function Home() {
                         </h3>
                         <div className={pointStyles.under}>
                             <Image
-                                src="/coffee/コーヒー豆こだわり 2.png"
+                                src="/coffee/Commitment2.png"
                                 alt=""
                                 className={pointStyles.beanImage}
                                 width={400}
@@ -132,7 +132,7 @@ export default function Home() {
 
                     <li className={pointStyles.list}>
                         <Image
-                            src="/coffee/レトロな背景 1.png"
+                            src="/coffee/background.png"
                             alt=""
                             width={1300}
                             height={600}
@@ -143,7 +143,7 @@ export default function Home() {
                         </h3>
                         <div className={pointStyles.under}>
                             <Image
-                                src="/coffee/コーヒー豆こだわり 3.png"
+                                src="/coffee/Commitment3.png"
                                 alt=""
                                 className={pointStyles.beanImage}
                                 width={400}
@@ -228,14 +228,14 @@ export default function Home() {
                     <div className={productStyles.under}>
                         <div className={productStyles.left}>
                             <Image
-                                src="/coffee/コーヒー豆販売-removebg-preview 1.png"
+                                src="/coffee/coffeepackage.png"
                                 alt=""
                                 className={productStyles.bean}
                                 width={220}
                                 height={220}
                             />
                             <Image
-                                src="/coffee/コーヒー 1.png"
+                                src="/coffee/coffee.png"
                                 alt=""
                                 className={productStyles.coffee}
                                 width={330}
