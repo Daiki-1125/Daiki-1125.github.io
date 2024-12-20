@@ -1,0 +1,129 @@
+.fv {
+    color: var(--portfolioGray);
+
+    .top {
+        padding: 180px 64px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .titlePc {}
+
+        .titlePhone {
+            display: none;
+        }
+
+        .text {}
+    }
+
+    .under {
+        position: relative;
+        background-color: var(--portfolioWhite);
+        margin-top: 250px;
+        height: 300px;
+
+        .title {
+            font-size: calc(100vw / 12);
+            color: rgba(var(--portfolioBlue), .4);
+            margin: 0;
+            position: absolute;
+            top: -100px;
+        }
+
+        p {
+            font-size: var(--portfolioLarge);
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+
+            &:nth-of-type(1) {
+                rotate: 3deg;
+                top: 80px;
+            }
+
+            &:nth-of-type(2) {
+                rotate: 3deg;
+                top: 60px;
+                right: 80px;
+            }
+
+            &:nth-of-type(3) {
+                font-size: var(--portfolioFonth2);
+                font-weight: bold;
+                word-break: keep-all;
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                rotate: -4.5deg;
+            }
+
+        }
+
+        .left {
+            position: absolute;
+            top: 35%;
+            left: 30%;
+        }
+
+        .right {
+            position: absolute;
+            top: 30%;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width:767px) {
+
+    .fv {
+        .imgBox {
+            width: 80vw;
+            aspect-ratio: 85 / 22;
+    
+            .titlePc {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+        .under{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .fv {
+        color: var(--portfolioGray);
+
+        .top {
+            padding: 110px 20px 0;
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+
+            .imgBox {
+                width: 90vw;
+                aspect-ratio: 85 / 22;
+
+                .titlePc {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+
+            .text {
+                float: right;
+                margin-top: 24px;
+            }
+        }
+
+        .under {
+            display: none;
+        }
+    }
+}

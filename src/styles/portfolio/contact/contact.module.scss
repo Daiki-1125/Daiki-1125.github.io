@@ -1,0 +1,285 @@
+.contact {
+    padding-top: 150px;
+    color: var(--portfolioGray);
+
+    .titleBox {
+        margin: 0 64px;
+        background-color: rgba(var(--portfolioBlue), .3);
+        height: 80px;
+        width: 400px;
+        position: relative;
+        display: inline-block;
+        font-family: "Zen Kaku Gothic New";
+
+        &::after {
+            font-size: var(--portfolioLarge);
+            color: var(--portfolioGray);
+            position: absolute;
+            content: "お問い合わせ";
+            word-break: keep-all;
+            bottom: 0;
+            right: -30%;
+
+        }
+
+        .title {
+            font-family: "Zen Kaku Gothic New";
+            color: var(--portfolioWhite);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            margin: 0;
+            font-size: var(--portfolioFonth1);
+        }
+    }
+
+    .main {
+        margin-top: 100px;
+        padding: 0 20vw;
+
+        .inputBox {
+            width: 100%;
+            margin-top: 50px;
+            position: relative;
+
+            .text {
+                font-size: var(--portfolioSmall);
+                margin: 0;
+                position: absolute;
+                top: -30px;
+                left: -40px;
+
+                span {
+                    color: rgba(var(--portfolioBlue));
+                }
+            }
+
+            .input {
+                width: 100%;
+                padding: 10px;
+                font-size: var(--portfolioSmall);
+                border: 2px solid rgba(var(--portfolioBlue), .5);
+                outline-color: rgba(var(--portfolioBlue));
+                border-radius: 16px;
+            }
+
+            .textarea {
+                width: 100%;
+                height: 250px;
+                padding: 10px;
+                font-size: var(--portfolioSmall);
+                border: 2px solid rgba(var(--portfolioBlue), .5);
+                outline-color: rgba(var(--portfolioBlue));
+                resize: none;
+                border-radius: 16px;
+            }
+        }
+    }
+    .btnBox{
+        margin-top: 32px;
+        text-align: center;
+        .btn{
+            font-size: var(--portfolioNormal);
+            padding: 10px 50px;
+            border-radius: 16px;
+            background-color: rgba(var(--portfolioBlue) , .05);
+            border: 2px solid rgba(var(--portfolioBlue) , .6);
+        }
+    }
+}
+
+
+@media screen and (max-width:1023px) and (min-width:768px) {
+    .contact {
+        padding-top: 150px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 40px;
+            background-color: rgba(var(--portfolioBlue), .3);
+            height: 60px;
+            width: 350px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after {
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "お問い合わせ";
+                word-break: keep-all;
+                bottom: 0;
+                right: -30%;
+    
+            }
+    
+            .title {
+                font-family: "Zen Kaku Gothic New";
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .main {
+            margin-top: 100px;
+            padding: 0 20vw;
+    
+            .inputBox {
+                width: 100%;
+                margin-top: 50px;
+                position: relative;
+    
+                .text {
+                    font-size: var(--portfolioSmall);
+                    margin: 0;
+                    position: absolute;
+                    top: -20px;
+                    left: -40px;
+    
+                    span {
+                        color: rgba(var(--portfolioBlue));
+                    }
+                }
+    
+                .input {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: var(--portfolioSmall);
+                    border: 2px solid rgba(var(--portfolioBlue), .5);
+                    outline-color: rgba(var(--portfolioBlue));
+                    border-radius: 16px;
+                }
+    
+                .textarea {
+                    width: 100%;
+                    height: 200px;
+                    padding: 10px;
+                    font-size: var(--portfolioSmall);
+                    border: 2px solid rgba(var(--portfolioBlue), .5);
+                    outline-color: rgba(var(--portfolioBlue));
+                    resize: none;
+                    border-radius: 16px;
+                }
+            }
+        }
+        .btnBox{
+            margin-top: 32px;
+            text-align: center;
+            .btn{
+                font-size: var(--portfolioNormal);
+                padding: 10px 50px;
+                border-radius: 16px;
+                background-color: rgba(var(--portfolioBlue) , .05);
+                border: 2px solid rgba(var(--portfolioBlue) , .6);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .contact {
+        padding-top: 110px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), .3);
+            height: 40px;
+            width: 250px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after {
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "お問い合わせ";
+                word-break: keep-all;
+                bottom: 0;
+                right: -30%;
+    
+            }
+    
+            .title {
+                font-family: "Zen Kaku Gothic New";
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .main {
+            margin-top: 50px;
+            padding: 0 20vw;
+    
+            .inputBox {
+                width: 100%;
+                margin-top: 50px;
+                position: relative;
+    
+                .text {
+                    font-size: var(--portfolioSmall);
+                    margin: 0;
+                    position: absolute;
+                    top: -20px;
+                    left: -40px;
+    
+                    span {
+                        color: rgba(var(--portfolioBlue));
+                    }
+                }
+    
+                .input {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: var(--portfolioSmall);
+                    border: 2px solid rgba(var(--portfolioBlue), .5);
+                    outline-color: rgba(var(--portfolioBlue));
+                    border-radius: 16px;
+                }
+    
+                .textarea {
+                    width: 100%;
+                    height: 125px;
+                    padding: 10px;
+                    font-size: var(--portfolioSmall);
+                    border: 2px solid rgba(var(--portfolioBlue), .5);
+                    outline-color: rgba(var(--portfolioBlue));
+                    resize: none;
+                    border-radius: 16px;
+                }
+            }
+        }
+        .btnBox{
+            margin-top: 32px;
+            text-align: center;
+            .btn{
+                font-size: var(--portfolioNormal);
+                padding: 10px 50px;
+                border-radius: 16px;
+                background-color: rgba(var(--portfolioBlue) , .05);
+                border: 2px solid rgba(var(--portfolioBlue) , .6);
+            }
+        }
+    }
+    
+}

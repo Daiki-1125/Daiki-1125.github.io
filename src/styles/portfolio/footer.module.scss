@@ -1,0 +1,101 @@
+.footer{
+    margin-top: 100px;
+    .listBox{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .list{
+            background-image: url(/portfolio/footerBackgroundPc.png);
+            height: 250px;
+            border-top: 5px solid rgba(255 , 255 , 255 , .6);
+            border-bottom: 5px solid rgba(255 , 255 , 255 , .6);
+            .link{
+                color: var(--portfolioWhite);
+                font-size: var(--portfolioFonth1);
+                text-decoration: none;
+                font-family: "Zen Kaku Gothic New";
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                .lineLeft{
+                    width: 30vw;
+                    height: 1px;
+                    background-color: #fff;
+                }
+                .text{
+                    margin: 0;
+                }
+                .lineRight{
+                    width: 30vw;
+                    height: 1px;
+                    background-color: #fff;
+                }
+                &:visited{
+                    color: var(--portfolioWhite);
+                }
+            }
+        }
+    }
+    .displayNone{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1023px) and (min-width:767px) {
+    
+}
+
+@media screen and (max-width:767px) {
+    .footer{
+        margin-top: 100px;
+        .listBox{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            .list{
+                background-image: url(/portfolio/footerBackgroundPhone.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100vw;
+                aspect-ratio: 39 / 7;
+                height: auto;
+                border-top: 5px solid rgba(255 , 255 , 255 , .6);
+                border-bottom: 5px solid rgba(255 , 255 , 255 , .6);
+                .link{
+                    color: var(--portfolioWhite);
+                    font-size: var(--portfolioFonth1);
+                    text-decoration: none;
+                    font-family: "Zen Kaku Gothic New";
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+                    .lineLeft{
+                        width: 30vw;
+                        height: 1px;
+                        background-color: #fff;
+                    }
+                    .text{
+                        margin: 0;
+                    }
+                    .lineRight{
+                        width: 30vw;
+                        height: 1px;
+                        background-color: #fff;
+                    }
+                    &:visited{
+                        color: var(--portfolioWhite);
+                    }
+                }
+            }
+        }
+        .displayNone{
+            display: none;
+        }
+    }
+    
+}

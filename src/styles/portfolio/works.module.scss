@@ -1,0 +1,242 @@
+.works {
+    margin-top: 100px;
+    color: var(--portfolioGray);
+
+    .titleBox {
+        margin: 0 64px;
+        background-color: rgba(var(--portfolioBlue), .3);
+        height: 80px;
+        width: 400px;
+        position: relative;
+        display: inline-block;
+        font-family: "Zen Kaku Gothic New";
+
+        &::after{
+            font-size: var(--portfolioNormal);
+            color: var(--portfolioGray);
+            position: absolute;
+            content: "実績・制作物";
+            word-break: keep-all;
+            bottom: 0;
+            right: -30%;
+
+        }
+            .title {
+        font-family: "Zen Kaku Gothic New";
+
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+        }
+    }
+
+    .listBox {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-top: 50px;
+        .list {
+            background-image: url(/portfolio/WorksBackgroundPc.png);
+            padding: 50px 64px;
+            display: flex;
+            height: 400px;
+            margin-top: 24px;
+            &:first-child{
+                margin-top: 0;
+            }
+            .left {
+                width: 50%;
+                .leftImg {}
+            }
+
+            .right {
+                width: 50%;
+                .listTitle {
+                    font-size: var(--portfolioFonth3);
+                    margin: 0;
+                }
+
+                .text {
+                    margin: 70px 0 0;
+                    font-size: var(--portfolioSmall);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width:768px) {
+    
+    .works {
+        margin-top: 100px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), .3);
+            height: 60px;
+            width: 350px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after{
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "実績・制作物";
+                word-break: keep-all;
+                bottom: 0;
+                right: -30%;
+    
+            }
+                .title {
+            font-family: "Zen Kaku Gothic New";
+    
+                    color: var(--portfolioWhite);
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    margin: 0;
+                    font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .listBox {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 50px;
+            .list {
+                width: 100vw;
+                aspect-ratio: 39 / 55;
+                background-image: url(/portfolio/WorksBackgroundPhone.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding: 20px;
+                display: block;
+                height: auto;
+                margin-top: 24px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                .left {
+                    width: 100%;
+                    aspect-ratio: 5 / 3;
+                    .leftImg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .right {
+                    width: auto;
+                    .listTitle {
+                        font-size: var(--portfolioFonth3);
+                        margin: 48px 0 0;
+                    }
+    
+                    .text {
+                        margin: 24px 0 0;
+                        font-size: var(--portfolioSmall);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .works {
+        margin-top: 100px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), .3);
+            height: 40px;
+            width: 250px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after{
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "実績・制作物";
+                word-break: keep-all;
+                bottom: 0;
+                right: -30%;
+    
+            }
+                .title {
+            font-family: "Zen Kaku Gothic New";
+    
+                    color: var(--portfolioWhite);
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    margin: 0;
+                    font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .listBox {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 50px;
+            .list {
+                width: 100vw;
+                aspect-ratio: 39 / 55;
+                background-image: url(/portfolio/WorksBackgroundPhone.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                padding: 20px;
+                display: block;
+                height: auto;
+                margin-top: 24px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                .left {
+                    width: 100%;
+                    aspect-ratio: 5 / 3;
+                    .leftImg {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .right {
+                    width: auto;
+                    .listTitle {
+                        font-size: var(--portfolioFonth3);
+                        margin: 48px 0 0;
+                    }
+    
+                    .text {
+                        margin: 24px 0 0;
+                        font-size: var(--portfolioSmall);
+                    }
+                }
+            }
+        }
+    }
+    
+}

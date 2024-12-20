@@ -1,11 +1,11 @@
-.allBg{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: -100;
-    object-fit: cover;
-}
 .fv {
+    .allBg{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -100;
+        object-fit: cover;
+    }
     width: 100vw;
     height: 800px;
     position: relative;

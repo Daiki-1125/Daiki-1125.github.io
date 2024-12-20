@@ -9,6 +9,7 @@
     "lint": "next lint",
     "deploy": "npm run build && npm run export && gh-pages -d out",
     "dep": "npm run build && npx gh-pages -d out",
+    "test": "npm run build && npx serve out",
     "git": "git add . && git commit -m \"auto commit\"&& git push origin main_v3",
     "export": "next export"
   },

@@ -1,0 +1,161 @@
+.header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    background-color: var(--portfolioWhite);
+    color: var(--portfolioGray);
+
+    .left {
+        font-size: var(--portfolioLarge);
+        font-weight: 900;
+    }
+
+    .right {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+
+        .list {
+            margin-left: 20px;
+
+            &:last-child {
+                padding: 5px 10px;
+                border-radius: 1000px;
+                border: .5px solid var(--portfolioGray);
+            }
+
+            .link {
+                color: var(--portfolioGray);
+                text-decoration: none;
+                font-size: var(--portfolioNormal);
+
+                &:visited {
+                    color: var(--portfolioGray);
+                }
+            }
+        }
+    }
+
+    .burgerBox {
+        display: none;
+    }
+    .burgerNav{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1023px) and (min-width:768px) {
+    //修正なし
+}
+
+@media screen and (max-width:767px) {
+    .header {
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        position: fixed;
+        z-index: 10000000;
+        top: 0;
+        background-color: var(--portfolioWhite);
+        color: var(--portfolioGray);
+
+        .left {
+            font-size: var(--portfolioLarge);
+            font-weight: 900;
+        }
+
+        .right {
+            display: none;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            align-items: center;
+
+            .list {
+                margin-left: 20px;
+
+                &:last-child {
+                    padding: 5px 10px;
+                    border-radius: 1000px;
+                    border: .5px solid var(--portfolioGray);
+                }
+
+                .link {
+                    color: var(--portfolioGray);
+                    text-decoration: none;
+                    font-size: var(--portfolioNormal);
+
+                    &:visited {
+                        color: var(--portfolioGray);
+                    }
+                }
+            }
+        }
+
+        .burgerBox {
+            --opacity: 1;
+            --rotate: 0;
+            --translate: 0.5rem;
+            --burger-color: #444;
+            --background-color: #fff;
+            display: grid;
+            width: 60px;
+            height: 60px;
+            place-items: center;
+            border: none;
+            background-color: var(--background-color);
+            cursor: pointer;
+            position: fixed;
+            z-index: 10;
+            left: calc(100vw - 60px);
+            top: 0;
+
+            &.isActive {
+                --opacity: 0;
+                --rotate: 135deg;
+                --translate: 0;
+                --background-color: #fff opacity:0.7;
+            }
+
+            span {
+                display: block;
+                width: 70%;
+                height: 2px;
+                background-color: var(--burger-color);
+                grid-area: 1 / 1 / -1 / -1;
+                transition: opacity 0.4s, rotate 0.4s, translate 0.4s;
+                border-radius: 8px;
+
+                &:nth-child(1) {
+                    opacity: var(--opacity);
+                }
+
+                &:nth-child(2) {
+                    translate: 0 calc(var(--translate) * -1);
+                    rotate: var(--rotate);
+                }
+
+                &:nth-child(3) {
+                    translate: 0 var(--translate);
+                    rotate: calc(var(--rotate) * -1);
+                }
+            }
+        }
+        .burgerNav{
+            display: none;
+        }
+
+    }
+
+}

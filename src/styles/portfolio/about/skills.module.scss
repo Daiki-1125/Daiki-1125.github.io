@@ -1,0 +1,383 @@
+.skills {
+    margin-top: 200px;
+    color: var(--portfolioGray);
+
+    .titleBox {
+        margin: 0 64px;
+        background-color: rgba(var(--portfolioBlue), .3);
+        height: 80px;
+        width: 400px;
+        position: relative;
+        display: inline-block;
+        font-family: "Zen Kaku Gothic New";
+
+        &::after {
+            font-size: var(--portfolioLarge);
+            color: var(--portfolioGray);
+            position: absolute;
+            content: "スキル";
+            word-break: keep-all;
+            bottom: 0;
+            right: -20%;
+
+        }
+
+        .title {
+            font-family: "Zen Kaku Gothic New";
+
+            color: var(--portfolioWhite);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            margin: 0;
+            font-size: var(--portfolioFonth1);
+        }
+    }
+
+    .main {
+        margin-top: 50px;
+
+        .listBox {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .list {
+                width: 83vw;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: rgba(var(--portfolioBlue), .6);
+                padding: 0 50px;
+                border-radius: 0 32px 0 0;
+                color: var(--portfolioWhite);
+                .left {
+                    width: 45%;
+
+                    .leftImg {}
+                    .leftImgPhone {
+                        display: none;
+                    }
+                }
+
+                .right {
+                    width: 50%;
+                    .skill {
+                        font-size: var(--portfolioFonth3);
+                        margin: 0;
+                    }
+
+                    .useSkill {
+                        margin: 8px 0 0;
+                        font-size: var(--portfolioNormal);
+                    }
+
+                    .text {
+                        margin: 16px 0 0;
+                        font-size: var(--portfolioVarySmall);
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    width: 83vw;
+                    height: 300px;
+                    background-color: rgba(var(--portfolioBlue));
+                    border-radius: 32px 0 0 0;
+                    margin: 32px 0 0 17vw ;
+                    .left {
+                        width: 45%;
+
+                        .leftImg {}
+                    }
+
+                    .right {
+                        width: 50%;
+
+                        .skill {
+                            font-size: var(--portfolioFonth3);
+                            margin: 0;
+                        }
+
+                        .useSkill {
+                            margin: 8px 0 0;
+                            font-size: var(--portfolioNormal);
+                        }
+
+                        .text {
+                            margin: 16px 0 0;
+                            font-size: var(--portfolioVarySmall);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1023px) and (min-width:767px) {
+    
+    .skills {
+        margin-top: 100px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), .3);
+            height: 60px;
+            width: 350px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after {
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "スキル";
+                word-break: keep-all;
+                bottom: 0;
+                right: -18%;
+    
+            }
+    
+            .title {
+                font-family: "Zen Kaku Gothic New";
+    
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .main {
+            margin-top: 50px;
+    
+            .listBox {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+    
+                .list {
+                    width: 100vw;
+                    height: 400px;
+                    display: block;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: rgba(var(--portfolioBlue), .6);
+                    padding: 0;
+                    border-radius: 0 0px 0 0;
+                    color: var(--portfolioWhite);
+                    .left {
+                        width: 100%;
+                        display: flex;
+                        justify-content: right;
+                        .leftImg {
+                            display: none;
+                        }
+                        .leftImgPhone {
+                            display: block;
+                        }
+    
+                    }
+                    .right {
+                        width: 100%;
+                        padding: 20px;
+                        margin-top: -110px;
+                        .skill {
+                            font-size: var(--portfolioFonth3);
+                            margin: 0;
+                        }
+    
+                        .useSkill {
+                            margin: 8px 0 0;
+                            font-size: var(--portfolioNormal);
+                        }
+    
+                        .text {
+                            margin: 56px 0 0;
+                            font-size: var(--portfolioVarySmall);
+                        }
+                    }
+    
+                    &:nth-of-type(2) {
+                        width: 100vw;
+                        height: 400px;
+                        background-color: rgba(var(--portfolioBlue));
+                        border-radius: 0px;
+                        margin: 32px 0 0;
+                        .left {
+                            width: 100%;
+                            height: 267px;
+                            align-items: center;
+                            .leftImg {  
+                                width: 262px;
+                                height: 166px;
+                                display: block;
+                            }
+                        }
+    
+                        .right {
+                            width: 100%;
+                            .skill {
+                                font-size: var(--portfolioFonth3);
+                                margin: 0;
+                            }
+    
+                            .useSkill {
+                                margin: 8px 0 0;
+                                font-size: var(--portfolioNormal);
+                            }
+    
+                            .text {
+                                margin-top: 56px;
+                                font-size: var(--portfolioVarySmall);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .skills {
+        margin-top: 100px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), .3);
+            height: 40px;
+            width: 250px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after {
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "スキル";
+                word-break: keep-all;
+                bottom: 0;
+                right: -18%;
+    
+            }
+    
+            .title {
+                font-family: "Zen Kaku Gothic New";
+    
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .main {
+            margin-top: 50px;
+    
+            .listBox {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+    
+                .list {
+                    width: 100vw;
+                    height: 400px;
+                    display: block;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: rgba(var(--portfolioBlue), .6);
+                    padding: 0;
+                    border-radius: 0 0px 0 0;
+                    color: var(--portfolioWhite);
+                    .left {
+                        width: 100%;
+                        display: flex;
+                        justify-content: right;
+                        .leftImg {
+                            display: none;
+                        }
+                        .leftImgPhone {
+                            display: block;
+                        }
+
+                    }
+                    .right {
+                        width: 100%;
+                        padding: 20px;
+                        margin-top: -110px;
+                        .skill {
+                            font-size: var(--portfolioFonth3);
+                            margin: 0;
+                        }
+    
+                        .useSkill {
+                            margin: 8px 0 0;
+                            font-size: var(--portfolioNormal);
+                        }
+    
+                        .text {
+                            margin: 56px 0 0;
+                            font-size: var(--portfolioVarySmall);
+                        }
+                    }
+    
+                    &:nth-of-type(2) {
+                        width: 100vw;
+                        height: 400px;
+                        background-color: rgba(var(--portfolioBlue));
+                        border-radius: 0px;
+                        margin: 32px 0 0;
+                        .left {
+                            width: 100%;
+                            height: 267px;
+                            align-items: center;
+                            .leftImg {  
+                                width: 262px;
+                                height: 166px;
+                                display: block;
+                            }
+                        }
+    
+                        .right {
+                            width: 100%;
+                            .skill {
+                                font-size: var(--portfolioFonth3);
+                                margin: 0;
+                            }
+    
+                            .useSkill {
+                                margin: 8px 0 0;
+                                font-size: var(--portfolioNormal);
+                            }
+    
+                            .text {
+                                margin-top: 56px;
+                                font-size: var(--portfolioVarySmall);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

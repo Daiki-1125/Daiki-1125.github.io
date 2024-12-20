@@ -1,0 +1,299 @@
+.hobby {
+    margin-top: 200px;
+    color: var(--portfolioGray);
+
+    .titleBox {
+        margin: 0 64px;
+        background-color: rgba(var(--portfolioBlue), 0.3);
+        height: 80px;
+        width: 400px;
+        position: relative;
+        display: inline-block;
+        font-family: "Zen Kaku Gothic New";
+
+        &::after {
+            font-size: var(--portfolioLarge);
+            color: var(--portfolioGray);
+            position: absolute;
+            content: "趣味";
+            word-break: keep-all;
+            bottom: 0;
+            right: -10%;
+        }
+
+        .title {
+            font-family: "Zen Kaku Gothic New";
+            color: var(--portfolioWhite);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            font-size: var(--portfolioFonth1);
+        }
+    }
+
+    .main {
+        .listBox {
+            margin: 50px 0 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3列の均等幅 */
+            gap: 20px; /* アイテム間の余白 */
+            padding: 0 64px;
+            place-items: center; /* グリッド内の要素を水平・垂直中央揃え */
+
+            .list {
+                width: 300px; /* アイテムサイズ */
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 32px;
+                transition: transform 0.6s ease;
+
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: 32px;
+                    transition: transform 0.6s ease;
+                }
+
+                .hoverBox {
+                    position: absolute;
+                    background-color: rgba(var(--portfolioBlue), 0.8);
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px 10px;
+                    opacity: 0;
+                    color: var(--portfolioWhite);
+                    transition: opacity 0.6s ease;
+
+                    .title {
+                        font-size: var(--portfolioNormal);
+                        margin: 0;
+                        text-align: center;
+                    }
+
+                    .text {
+                        font-size: var(--portfolioVarySmall);
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .img {
+                        transform: scale(1.2, 1.2);
+                    }
+
+                    .hoverBox {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1023px) and (min-width:767px) {
+    
+    .hobby {
+        margin-top: 200px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), 0.3);
+            height: 60px;
+            width: 350px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after {
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "趣味";
+                word-break: keep-all;
+                bottom: 0;
+                right: -10%;
+            }
+    
+            .title {
+                font-family: "Zen Kaku Gothic New";
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .main {
+            .listBox {
+                margin: 50px 0 0;
+                list-style: none;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 3列の均等幅 */
+                gap: 20px; /* アイテム間の余白 */
+                padding: 0 64px;
+                place-items: center; /* グリッド内の要素を水平・垂直中央揃え */
+    
+                .list {
+                    width: 300px; /* アイテムサイズ */
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 32px;
+                    transition: transform 0.6s ease;
+    
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        border-radius: 32px;
+                        transition: transform 0.6s ease;
+                    }
+    
+                    .hoverBox {
+                        position: absolute;
+                        background-color: rgba(var(--portfolioBlue), 0.8);
+                        width: 100%;
+                        height: 100%;
+                        padding: 50px 10px;
+                        opacity: 0;
+                        color: var(--portfolioWhite);
+                        transition: opacity 0.6s ease;
+    
+                        .title {
+                            font-size: var(--portfolioFonth2);
+                            margin: 0;
+                            text-align: center;
+                        }
+    
+                        .text {
+                            font-size: var(--portfolioLarge);
+                        }
+                    }
+    
+                    &:hover {
+                        cursor: pointer;
+    
+                        .img {
+                            transform: scale(1.2, 1.2);
+                        }
+    
+                        .hoverBox {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .hobby {
+        margin-top: 200px;
+        color: var(--portfolioGray);
+    
+        .titleBox {
+            margin: 0 20px;
+            background-color: rgba(var(--portfolioBlue), 0.3);
+            height: 40px;
+            width: 250px;
+            position: relative;
+            display: inline-block;
+            font-family: "Zen Kaku Gothic New";
+    
+            &::after {
+                font-size: var(--portfolioLarge);
+                color: var(--portfolioGray);
+                position: absolute;
+                content: "趣味";
+                word-break: keep-all;
+                bottom: 0;
+                right: -10%;
+            }
+    
+            .title {
+                font-family: "Zen Kaku Gothic New";
+                color: var(--portfolioWhite);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                font-size: var(--portfolioFonth1);
+            }
+        }
+    
+        .main {
+            .listBox {
+                margin: 50px 0 0;
+                list-style: none;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr); /* 3列の均等幅 */
+                gap: 20px; /* アイテム間の余白 */
+                padding: 0 64px;
+                place-items: center; /* グリッド内の要素を水平・垂直中央揃え */
+    
+                .list {
+                    width: 300px; /* アイテムサイズ */
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 32px;
+                    transition: transform 0.6s ease;
+    
+                    .img {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        border-radius: 32px;
+                        transition: transform 0.6s ease;
+                    }
+    
+                    .hoverBox {
+                        position: absolute;
+                        background-color: rgba(var(--portfolioBlue), 0.8);
+                        width: 100%;
+                        height: 100%;
+                        padding: 50px 10px;
+                        opacity: 0;
+                        color: var(--portfolioWhite);
+                        transition: opacity 0.6s ease;
+    
+                        .title {
+                            font-size: var(--portfolioFonth2);
+                            margin: 0;
+                            text-align: center;
+                        }
+    
+                        .text {
+                            font-size: var(--portfolioLarge);
+                        }
+                    }
+    
+                    &:hover {
+                        cursor: pointer;
+    
+                        .img {
+                            transform: scale(1.2, 1.2);
+                        }
+    
+                        .hoverBox {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

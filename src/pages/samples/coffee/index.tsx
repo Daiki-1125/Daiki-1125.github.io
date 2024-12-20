@@ -18,10 +18,11 @@ export default function Home() {
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet" />
             </Head>
-            <Image src="/coffee/木目 3.png" alt="" width={1000} height={800} className={fvStyles.bgImg} />
+
 
 
             <section className={fvStyles.fv}>
+            <Image src="/coffee/tree.png" alt="" width={1000} height={800} className={fvStyles.allBg} />
                 <Image src="/coffee/coffeeBean1.png" alt="" className={fvStyles.bgImg} width={1500} height={800} />
 
                 <h1 className={fvStyles.title}>

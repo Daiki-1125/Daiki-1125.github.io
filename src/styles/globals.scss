@@ -85,6 +85,45 @@
     }
 }
 
+//ポートフォリオ
+:root{
+    --portfolioWhite: rgba(255 , 255 , 255);
+    --portfolioBlack: rgba(0 , 0 , 0);
+    --portfolioGray: rgba(68 , 68 , 68);
+    --portfolioLightGray: rgba(217 , 217 , 217);
+    --portfolioBlue: 67 , 140 , 192;
+    --portfolioMainBg: #f3faff;
+
+    --portfolioFonth1: 120px;
+    --portfolioFonth2: 48px;
+    --portfolioFonth3: 40px;
+    --portfolioLarge: 32px;
+    --portfolioNormal: 24px;
+    --portfolioSmall: 18px;
+    --portfolioVarySmall: 16px;
+    @media screen  and (max-width: 1023px) and (min-width:768px){
+        --portfolioFonth1: 100px;
+        --portfolioFonth2: 40px;
+        --portfolioFonth3: 30px;
+        --portfolioLarge: 26px;
+        --portfolioNormal: 20px;
+        --portfolioSmall: 15px;
+        --portfolioVarySmall: 13px;
+        
+    }
+    
+    @media screen and (max-width:767px) {
+        --portfolioFonth1: 60px;
+        --portfolioFonth2: 28px;
+        --portfolioFonth3: 22px;
+        --portfolioLarge: 18px;
+        --portfolioNormal: 16px;
+        --portfolioSmall: 12px;
+        --portfolioVarySmall: 10px;
+        
+    }
+}
+
 body{
     margin: 0px;
     padding: 0px;
