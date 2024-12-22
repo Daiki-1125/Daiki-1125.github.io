@@ -5,8 +5,63 @@ import footerStyles from "@/styles/portfolio/footer.module.scss";
 import aboutStyles from "@/styles/portfolio/about/about.module.scss";
 import skillsStyles from "@/styles/portfolio/about/skills.module.scss";
 import hobbyStyles from "@/styles/portfolio/about/hobby.module.scss";
+import { useEffect } from "react";
 
 export default function Home() {
+    useEffect(() => {
+        const burger = document.getElementById("burger");
+        const burgerNav = document.getElementById("burgerNav");
+
+        if (burger && burgerNav) {
+            burger.addEventListener("click", () => {
+                burger.classList.toggle(headerStyles.isActive);
+                burgerNav.classList.toggle(headerStyles.isActive);
+            });
+        }
+    })
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const skillsPops = document.querySelectorAll(`.${skillsStyles.list}`);
+            skillsPops.forEach((p) => {
+                const { top } = p.getBoundingClientRect();
+                console.log("スクロール時 top:", top, "window.innerHeight:", window.innerHeight);
+                if (top < window.innerHeight && top > 0) {
+                    console.log("要素が画面内に入りました");
+                    p.classList.add(skillsStyles.popped);
+                }
+            });
+
+            const aboutImgPops = document.querySelectorAll(`.${aboutStyles.left}`);
+            aboutImgPops.forEach((p) => {
+                const { top } = p.getBoundingClientRect();
+                console.log("スクロール時 top:", top, "window.innerHeight:", window.innerHeight);
+                if (top < window.innerHeight && top > 0) {
+                    console.log("要素が画面内に入りました");
+                    p.classList.add(aboutStyles.popped);
+                }
+            });
+            const aboutTextPops = document.querySelectorAll(`.${aboutStyles.right}`);
+            aboutTextPops.forEach((p) => {
+                const { top } = p.getBoundingClientRect();
+                console.log("スクロール時 top:", top, "window.innerHeight:", window.innerHeight);
+                if (top < window.innerHeight && top > 0) {
+                    console.log("要素が画面内に入りました");
+                    p.classList.add(aboutStyles.popped);
+                }
+            });
+        };
+
+        handleScroll(); // 初回評価
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+
     return (
         <>
             <Head>
@@ -41,11 +96,31 @@ export default function Home() {
                     </li>
                 </ul>
 
-                <div className={headerStyles.burgerBox}>
+                <div className={headerStyles.burgerBox} id="burger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+
+                <nav className={headerStyles.burgerNav} id="burgerNav">
+                    <ul className={headerStyles.navList}>
+                        <li className={headerStyles.list}>
+                            <a href="" className={headerStyles.link}>
+                                Home
+                            </a>
+                        </li>
+                        <li className={headerStyles.list}>
+                            <a href="" className={headerStyles.link}>
+                                About
+                            </a>
+                        </li>
+                        <li className={headerStyles.list}>
+                            <a href="" className={headerStyles.link}>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
             </header>
 

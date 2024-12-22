@@ -3,8 +3,68 @@ import Image from "next/image";
 import headerStyles from "@/styles/portfolio/header.module.scss";
 import footerStyles from "@/styles/portfolio/footer.module.scss";
 import contactStyles from "@/styles/portfolio/contact/contact.module.scss";
+import { useEffect } from "react";
+import React, { useState } from "react";
 
 export default function Home() {
+    useEffect(() => {
+        const burger = document.getElementById("burger");
+        const burgerNav = document.getElementById("burgerNav");
+
+        if (burger && burgerNav) {
+            burger.addEventListener("click", () => {
+                burger.classList.toggle(headerStyles.isActive);
+                burgerNav.classList.toggle(headerStyles.isActive);
+            });
+        }
+    })
+    // State管理
+    const [name, setName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [message, setMessage] = useState<string>("");
+
+    // /pages/api/contact.js (Next.jsでの実装例)
+
+    const handleSendMail = async () => {
+        console.log('送信ボタンがクリックされました');
+        console.log('名前:', name);
+        console.log('メール:', email);
+        console.log('メッセージ:', message);
+
+        if (!name || !email || !message) {
+            alert('すべての項目を入力してください');
+            return;
+        }
+
+        const formData = {
+            name,
+            email,
+            message,
+        };
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert('メールが送信されました');
+            } else {
+                const errorText = await response.text();
+                console.error('メール送信失敗:', response.status, errorText);
+                alert('メール送信に失敗しました');
+            }
+        } catch (error) {
+            console.error('送信中にエラーが発生しました:', error);
+            alert('送信中にエラーが発生しました');
+        }
+    };
+
+
     return (
         <>
             <Head>
@@ -39,11 +99,31 @@ export default function Home() {
                     </li>
                 </ul>
 
-                <div className={headerStyles.burgerBox}>
+                <div className={headerStyles.burgerBox} id="burger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+
+                <nav className={headerStyles.burgerNav} id="burgerNav">
+                    <ul className={headerStyles.navList}>
+                        <li className={headerStyles.list}>
+                            <a href="" className={headerStyles.link}>
+                                Home
+                            </a>
+                        </li>
+                        <li className={headerStyles.list}>
+                            <a href="" className={headerStyles.link}>
+                                About
+                            </a>
+                        </li>
+                        <li className={headerStyles.list}>
+                            <a href="" className={headerStyles.link}>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
             </header>
             <main style={{ backgroundColor: 'var(--portfolioMainBg)' }}>
@@ -55,36 +135,56 @@ export default function Home() {
                             Contact
                         </h1>
                     </div>
-
                     <div className={contactStyles.main}>
                         <div className={contactStyles.inputBox}>
                             <p className={contactStyles.text}>
                                 お名前<span>*</span>
                             </p>
-                            <input type="text" className={contactStyles.input} placeholder="例 : 後藤 大輝" />
+                            <input
+                                type="text"
+                                className={contactStyles.input}
+                                placeholder="例 : 後藤 大輝"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
                         </div>
                         <div className={contactStyles.inputBox}>
                             <p className={contactStyles.text}>
                                 メールアドレス<span>*</span>
                             </p>
-                            <input type="email" className={contactStyles.input} placeholder="例 : info@example.com" />
+                            <input
+                                type="email"
+                                className={contactStyles.input}
+                                placeholder="例 : info@example.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                         </div>
                         <div className={contactStyles.inputBox}>
                             <p className={contactStyles.text}>
                                 メッセージ<span>*</span>
                             </p>
-                            <textarea className={contactStyles.textarea} placeholder="メッセージを入力" />
+                            <textarea
+                                className={contactStyles.textarea}
+                                placeholder="メッセージを入力"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                            />
                         </div>
                     </div>
                     <div className={contactStyles.btnBox}>
-                    <button className={contactStyles.btn}>
-                        送信
-                    </button>
+                        <button
+                            className={contactStyles.btn}
+                            onClick={handleSendMail}
+                        >
+                            送信
+                        </button>
                     </div>
                 </section>
 
 
-            <footer className={footerStyles.footer}>
+
+                <footer className={footerStyles.footer}>
                     <ul className={footerStyles.listBox}>
                         <li className={footerStyles.list}>
                             <a href="" className={footerStyles.link}>

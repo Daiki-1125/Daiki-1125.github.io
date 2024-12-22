@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/pages/api/contact.js"  ],
   "exclude": [
     "node_modules"
   ]

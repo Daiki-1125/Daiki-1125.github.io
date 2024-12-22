@@ -5,6 +5,7 @@ import fvStyles from "@/styles/portfolio/fv.module.scss";
 import worksStyles from "@/styles/portfolio/works.module.scss";
 import footerStyles from "@/styles/portfolio/footer.module.scss";
 import { useEffect } from "react";
+import React, { useState } from "react";
 
 
 export default function Home() {
@@ -18,8 +19,35 @@ export default function Home() {
         burgerNav.classList.toggle(headerStyles.isActive);
       });
     }
-  })
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const pops = document.querySelectorAll(`.${worksStyles.leftImg}`);
+      pops.forEach((p) => {
+        const { top } = p.getBoundingClientRect();
+        console.log("スクロール時 top:", top, "window.innerHeight:", window.innerHeight);
+        if (top < window.innerHeight && top > 0) {
+          console.log("要素が画面内に入りました");
+          p.classList.add(worksStyles.popped);
+        } 
+      });
+    };
+  
+    handleScroll(); // 初回評価
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+
+
+
+
   return (
+
     <>
       <Head>
         <title>Portfolio</title>
@@ -118,7 +146,7 @@ export default function Home() {
           <ul className={worksStyles.listBox}>
             <li className={worksStyles.list}>
               <div className={worksStyles.left}>
-                <Image src="" alt="" className={worksStyles.leftImg} width={500} height={300} />
+                <img src="https://placehold.jp/500x300.png" alt="" className={worksStyles.leftImg} width={500} height={300} />
               </div>
               <div className={worksStyles.right}>
                 <h3 className={worksStyles.listTitle}>
@@ -132,7 +160,7 @@ export default function Home() {
             </li>
             <li className={worksStyles.list}>
               <div className={worksStyles.left}>
-                <Image src="" alt="" className={worksStyles.leftImg} width={500} height={300} />
+                <img src="https://placehold.jp/500x300.png" alt="" className={worksStyles.leftImg} width={500} height={300} />
               </div>
               <div className={worksStyles.right}>
                 <h3 className={worksStyles.listTitle}>
@@ -146,7 +174,7 @@ export default function Home() {
             </li>
             <li className={worksStyles.list}>
               <div className={worksStyles.left}>
-                <Image src="" alt="" className={worksStyles.leftImg} width={500} height={300} />
+                <img src="https://placehold.jp/500x300.png" alt="" className={worksStyles.leftImg} width={500} height={300} />
               </div>
               <div className={worksStyles.right}>
                 <h3 className={worksStyles.listTitle}>
@@ -160,7 +188,7 @@ export default function Home() {
             </li>
             <li className={worksStyles.list}>
               <div className={worksStyles.left}>
-                <Image src="" alt="" className={worksStyles.leftImg} width={500} height={300} />
+                <img src="https://placehold.jp/500x300.png" alt="" className={worksStyles.leftImg} width={500} height={300} />
               </div>
               <div className={worksStyles.right}>
                 <h3 className={worksStyles.listTitle}>
@@ -208,5 +236,6 @@ export default function Home() {
         </footer>
       </main>
     </>
+
   );
 }

@@ -276,8 +276,12 @@
                 font-size: var(--portfolioNormal);
                 padding: 10px 50px;
                 border-radius: 16px;
-                background-color: rgba(var(--portfolioBlue) , .05);
-                border: 2px solid rgba(var(--portfolioBlue) , .6);
+                background-color: rgba(var(--portfolioBlue) , .000005);
+                border: 2px solid rgba(var(--portfolioBlue), .2);
+                outline-color: rgba(var(--portfolioBlue));
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
     }
